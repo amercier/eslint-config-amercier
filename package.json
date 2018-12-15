@@ -46,7 +46,10 @@
     "scaffolding",
     "tool"
   ],
-  "files": [],
+  "files": [
+    "index.json"
+  ],
+  "main": "index.json",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.10.0 || ^4.19.1"

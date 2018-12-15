@@ -23,6 +23,7 @@ Example of valid code:
 // - Replace description in `package.json`.
 // - Replace keywords in `package.json` after "verify".
 // - Replace this todo list by actual Javascript example.
+// - Edit `index.json`
 ```
 
 ## Installation
