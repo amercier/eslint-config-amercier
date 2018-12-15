@@ -30,6 +30,7 @@ Example of valid code:
 ## Installation
 
 Prerequisites:
+
 - [Node.js] 4+, **npm** 3+.
 - [ESLint] 4+
 
@@ -44,11 +45,10 @@ npm install --save-dev eslint eslint-config-template
 ## Usage
 
 Add this to your `.eslintrc.json`:
+
 ```json
 {
-  "extends": [
-    "template"
-  ]
+  "extends": ["template"]
 }
 ```
 
