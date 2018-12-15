@@ -1,0 +1,53 @@
+{
+  "name": "eslint-config-template",
+  "version": "0.0.0",
+  "description": "Skeleton for ESLint shareable configs",
+  "homepage": "https://github.com/amercier/eslint-config-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amercier/eslint-config-template"
+  },
+  "bugs": {
+    "url": "https://github.com/amercier/eslint-config-template/issues"
+  },
+  "author": "Alex Mercier <pro.alexandre.mercier@gmail.com> (https://amercier.com)",
+  "contributors": [
+    {
+      "name": "Alex Mercier",
+      "url": "https://amercier.com/"
+    }
+  ],
+  "license": "ISC",
+  "keywords": [
+    "check",
+    "checker",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "code",
+    "config",
+    "enforce",
+    "eslint",
+    "eslintconfig",
+    "hint",
+    "jscs",
+    "jshint",
+    "lint",
+    "policy",
+    "quality",
+    "simple",
+    "style checker",
+    "style linter",
+    "style",
+    "verify",
+    "skeleton",
+    "template",
+    "scaffolding",
+    "tool"
+  ],
+  "files": [],
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}

@@ -1,0 +1,9 @@
+/node_modules/
+/npm-debug.log
+/yarn-debug.log
+/yarn-error.log
+
+# Lockfiles for apps, but not for packages.
+# https://github.com/sindresorhus/ama/issues/479#issuecomment-310661514
+/package-lock.json
+/yarn.lock
