@@ -48,6 +48,10 @@
   ],
   "files": [],
   "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {}
+  "devDependencies": {
+    "eslint": "^5.10.0 || ^4.19.1"
+  },
+  "peerDependencies": {
+    "eslint": "^5.10.0 || ^4.19.1"
+  }
 }
