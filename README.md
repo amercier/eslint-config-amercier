@@ -11,7 +11,14 @@ Example of valid code:
 ```js
 // # TODO
 //
-// - Fork this repository.
+// - Clone this repository and push it to your own. DO NOT FORK IT, unless you are certain you will
+//   only do it once (GitHub doesn't allow multiple forks of the same project on the same account).
+//
+//       git clone https://github.com/amercier/eslint-config-template.git <YOUR_REPOSITORY_NAME>
+//       git remote rename origin upstream
+//       git remote add origin <YOUR_REPOSITORY_GIT_URL>
+//       git push -u origin master
+//
 // - Enable repository in Travis CI, trigger manual build
 // - Install and enable Greenkeeper: https://github.com/settings/installations/51959
 // - Replace `amercier/eslint-config-template` by your Github repo
