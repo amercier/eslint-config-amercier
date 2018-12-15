@@ -52,10 +52,16 @@ Add this to your `.eslintrc.json`:
 }
 ```
 
+## Contributing
+
+Please read [guidelines for contributing].
+
 ## License
 
-[![License](https://img.shields.io/npm/l/eslint-config-template.svg)](LICENSE.md)
+[![License](https://img.shields.io/npm/l/eslint-config-template.svg)][license]
 
 [eslint shareable configs]: https://eslint.org/docs/developer-guide/shareable-configs
 [node.js]: https://nodejs.org/
 [eslint]: https://eslint.org/
+[guidelines for contributing]: CONTRIBUTING.md
+[license]: LICENSE.md
