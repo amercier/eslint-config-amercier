@@ -50,6 +50,9 @@
     "index.json"
   ],
   "main": "index.json",
+  "scripts": {
+    "test": "eslint test"
+  },
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.10.0 || ^4.19.1"
