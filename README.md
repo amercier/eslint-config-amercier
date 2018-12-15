@@ -29,10 +29,10 @@ Example of valid code:
 // - Replace `pro.alexandre.mercier@gmail.com` by your e-mail address.
 // - Replace description in `package.json`.
 // - Replace keywords in `package.json` after "verify".
-// - Replace this todo list by actual Javascript example.
 // - Go to https://www.npmjs.com/ and create a new NPM access token.
 // - Set GITHUB_TOKEN environment variable the token value in Travis CI project settings.
 // - Run `git tag v0.0.0 && git push --tags` to publish version 0.0.0
+// - Replace this todo list by actual Javascript example.
 // - Edit `index.json`
 // - Edit `test/fixture`
 // - Set version to `0.1.0` in `package.json`
