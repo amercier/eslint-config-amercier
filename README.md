@@ -46,8 +46,13 @@ Prerequisites:
 - [Node.js] 4+, **npm** 3+.
 - [ESLint] 4+
 
+> **Important:** please note [ESLint] needs to be installed alongside this module. Latest versions
+> is recommended. This is because this modules uses [peer dependencies] to be more flexible. For
+> Node 4 and 5, use `eslint@4`.
+
 ```sh
-npm install --save-dev eslint eslint-config-template
+npm install --save-dev eslint
+npm install --save-dev eslint-config-template
 ```
 
 [![Dependency Status](https://img.shields.io/david/amercier/eslint-config-template.svg)](https://david-dm.org/amercier/eslint-config-template)
@@ -75,5 +80,6 @@ Please read [guidelines for contributing].
 [eslint shareable configs]: https://eslint.org/docs/developer-guide/shareable-configs
 [node.js]: https://nodejs.org/
 [eslint]: https://eslint.org/
+[peer dependencies]: https://nodejs.org/en/blog/npm/peer-dependencies/
 [guidelines for contributing]: CONTRIBUTING.md
 [license]: LICENSE.md
