@@ -33,6 +33,10 @@ Example of valid code:
 // - Set NPM_AUTH_TOKEN environment variable the token value in Travis CI project settings.
 // - Run `git tag v0.0.0 && git push --tags` to publish version 0.0.0
 // - Replace this todo list by actual Javascript example.
+// - Mention template (optional):
+//
+//       > **Note:** this ESLint config was created using [eslint-config-template](https://github.com/amercier/eslint-config-template).
+//
 // - Edit `index.json`
 // - Edit `test/fixture`
 // - Set version to `0.1.0` in `package.json`
