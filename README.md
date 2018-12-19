@@ -30,7 +30,7 @@ Example of valid code:
 // - Replace description in `package.json`.
 // - Replace keywords in `package.json` after "verify".
 // - Go to https://www.npmjs.com/ and create a new NPM access token.
-// - Set GITHUB_TOKEN environment variable the token value in Travis CI project settings.
+// - Set NPM_AUTH_TOKEN environment variable the token value in Travis CI project settings.
 // - Run `git tag v0.0.0 && git push --tags` to publish version 0.0.0
 // - Replace this todo list by actual Javascript example.
 // - Edit `index.json`
