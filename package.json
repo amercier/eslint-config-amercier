@@ -51,7 +51,8 @@
   ],
   "main": "index.json",
   "scripts": {
-    "test": "eslint test"
+    "test": "eslint test",
+    "lint": "prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,yml}'"
   },
   "dependencies": {},
   "devDependencies": {
@@ -62,10 +63,6 @@
   },
   "peerDependencies": {
     "eslint": "^5.10.0 || ^4.19.1"
-  },
-  "scripts": {
-    "test": "eslint test",
-    "lint": "prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,yml}'"
   },
   "husky": {
     "hooks": {
