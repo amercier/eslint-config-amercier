@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-amercier",
   "version": "0.0.0",
-  "description": "Skeleton for ESLint shareable configs",
+  "description": "My personal collection of all-in-one ESLint Shareable Configs",
   "homepage": "https://github.com/amercier/eslint-config-amercier",
   "repository": {
     "type": "git",

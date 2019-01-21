@@ -1,6 +1,6 @@
 # eslint-config-amercier
 
-> Skeleton for [ESLint shareable configs].
+> My personal collection of all-in-one [ESLint shareable configs].
 
 [![Latest Stable Version](https://img.shields.io/npm/v/eslint-config-amercier.svg)](https://www.npmjs.com/package/eslint-config-amercier)
 [![Build Status](https://img.shields.io/travis/amercier/eslint-config-amercier/master.svg)](https://travis-ci.org/amercier/eslint-config-amercier)
