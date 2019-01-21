@@ -41,10 +41,8 @@
     "style linter",
     "style",
     "verify",
-    "skeleton",
     "amercier",
-    "scaffolding",
-    "tool"
+    "all-in-one"
   ],
   "files": [
     "index.json"
