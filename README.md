@@ -23,7 +23,7 @@ Example of valid code:
 // - Install and enable Greenkeeper: https://github.com/settings/installations/51959
 // - Replace `amercier/eslint-config-amercier` by your Github repo
 // - Replace `eslint-config-amercier` by your NPM package name
-// - Replace `template` by your NPM package name without "eslint-config-"
+// - Replace `amercier` by your NPM package name without "eslint-config-"
 // - Replace `Alex Mercier` by your name.
 // - Replace `https://amercier.com/` by your website.
 // - Replace `pro.alexandre.mercier@gmail.com` by your e-mail address.
@@ -33,7 +33,7 @@ Example of valid code:
 // - Set NPM_AUTH_TOKEN environment variable the token value in Travis CI project settings.
 // - Run `git tag v0.0.0 && git push --tags` to publish version 0.0.0
 // - Replace this todo list by actual Javascript example.
-// - Mention template (optional):
+// - Mention amercier (optional):
 //
 //       > **Note:** this ESLint config was created using [eslint-config-amercier](https://github.com/amercier/eslint-config-amercier).
 //
@@ -69,7 +69,7 @@ Add this to your `.eslintrc.json`:
 
 ```json
 {
-  "extends": ["template"]
+  "extends": ["amercier"]
 }
 ```
 
