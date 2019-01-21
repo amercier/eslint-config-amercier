@@ -3,8 +3,8 @@
 > Skeleton for [ESLint shareable configs].
 
 [![Latest Stable Version](https://img.shields.io/npm/v/eslint-config-template.svg)](https://www.npmjs.com/package/eslint-config-template)
-[![Build Status](https://img.shields.io/travis/amercier/eslint-config-template/master.svg)](https://travis-ci.org/amercier/eslint-config-template)
-[![Greenkeeper](https://badges.greenkeeper.io/amercier/eslint-config-template.svg)](https://github.com/amercier/eslint-config-template/issues?q=label%3Agreenkeeper)
+[![Build Status](https://img.shields.io/travis/amercier/eslint-config-amercier/master.svg)](https://travis-ci.org/amercier/eslint-config-amercier)
+[![Greenkeeper](https://badges.greenkeeper.io/amercier/eslint-config-amercier.svg)](https://github.com/amercier/eslint-config-amercier/issues?q=label%3Agreenkeeper)
 
 Example of valid code:
 
@@ -14,14 +14,14 @@ Example of valid code:
 // - Clone this repository and push it to your own. DO NOT FORK IT, unless you are certain you will
 //   only do it once (GitHub doesn't allow multiple forks of the same project on the same account).
 //
-//       git clone https://github.com/amercier/eslint-config-template.git <YOUR_REPOSITORY_NAME>
+//       git clone https://github.com/amercier/eslint-config-amercier.git <YOUR_REPOSITORY_NAME>
 //       git remote rename origin upstream
 //       git remote add origin <YOUR_REPOSITORY_GIT_URL>
 //       git push -u origin master
 //
 // - Enable repository in Travis CI, trigger manual build
 // - Install and enable Greenkeeper: https://github.com/settings/installations/51959
-// - Replace `amercier/eslint-config-template` by your Github repo
+// - Replace `amercier/eslint-config-amercier` by your Github repo
 // - Replace `eslint-config-template` by your NPM package name
 // - Replace `template` by your NPM package name without "eslint-config-"
 // - Replace `Alex Mercier` by your name.
@@ -35,7 +35,7 @@ Example of valid code:
 // - Replace this todo list by actual Javascript example.
 // - Mention template (optional):
 //
-//       > **Note:** this ESLint config was created using [eslint-config-template](https://github.com/amercier/eslint-config-template).
+//       > **Note:** this ESLint config was created using [eslint-config-template](https://github.com/amercier/eslint-config-amercier).
 //
 // - Edit `index.json`
 // - Edit `test/fixture`
@@ -59,9 +59,9 @@ npm install --save-dev eslint
 npm install --save-dev eslint-config-template
 ```
 
-[![Dependency Status](https://img.shields.io/david/amercier/eslint-config-template.svg)](https://david-dm.org/amercier/eslint-config-template)
-[![devDependency Status](https://img.shields.io/david/dev/amercier/eslint-config-template.svg)](https://david-dm.org/amercier/eslint-config-template#info=devDependencies)
-[![peerDependency Status](https://img.shields.io/david/peer/amercier/eslint-config-template.svg)](https://david-dm.org/amercier/eslint-config-template#info=devDependencies)
+[![Dependency Status](https://img.shields.io/david/amercier/eslint-config-amercier.svg)](https://david-dm.org/amercier/eslint-config-amercier)
+[![devDependency Status](https://img.shields.io/david/dev/amercier/eslint-config-amercier.svg)](https://david-dm.org/amercier/eslint-config-amercier#info=devDependencies)
+[![peerDependency Status](https://img.shields.io/david/peer/amercier/eslint-config-amercier.svg)](https://david-dm.org/amercier/eslint-config-amercier#info=devDependencies)
 
 ## Usage
 
