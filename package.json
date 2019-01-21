@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-template",
+  "name": "eslint-config-amercier",
   "version": "0.0.0",
   "description": "Skeleton for ESLint shareable configs",
   "homepage": "https://github.com/amercier/eslint-config-amercier",
