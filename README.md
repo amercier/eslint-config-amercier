@@ -81,6 +81,10 @@ Please read [guidelines for contributing].
 
 [![License](https://img.shields.io/npm/l/eslint-config-amercier.svg)][license]
 
+---
+
+This ESLint config was created using [eslint-config-template](https://github.com/amercier/eslint-config-template)
+
 [eslint shareable configs]: https://eslint.org/docs/developer-guide/shareable-configs
 [node.js]: https://nodejs.org/
 [eslint]: https://eslint.org/
