@@ -33,7 +33,35 @@ npm install --save-dev eslint-config-amercier
 
 ## Configs
 
-This package is work-in-progress, no config has been implemented yet.
+### `amercier/vue-cli`
+
+Config for projects generated with [Vue CLI].
+
+#### Usage
+
+```json
+{
+  "root": true,
+  "extends": ["amercier/vue-cli"],
+  "parserOptions": {
+    "parser": "babel-eslint"
+  }
+}
+```
+
+#### Included configs and plugins
+
+- [@vue/eslint-config-airbnb]
+- [@vue/eslint-config-prettier]
+- [eslint-plugin-vue]: `recommended` + more rules
+- [eslint-plugin-strict-vue]: all rules
+- [eslint-plugin-more]: `recommended`
+- [eslint-plugin-unicorn]: `recommended` + exceptions
+- [eslint-plugin-jest]: `recommended` + `style` + more rules
+- [eslint-plugin-jsdoc-strict]: no exceptions
+- [eslint-plugin-eslint-comments]: `recommended`
+
+See [vue-cli config] for more details.
 
 ## Contributing
 
@@ -51,5 +79,16 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [peer dependencies]: https://nodejs.org/en/blog/npm/peer-dependencies/
 [node.js]: https://nodejs.org/
 [eslint]: https://eslint.org/
+[vue cli]: https://cli.vuejs.org/
+[@vue/eslint-config-airbnb]: https://www.npmjs.com/package/@vue/eslint-config-airbnb
+[@vue/eslint-config-prettier]: https://www.npmjs.com/package/@vue/eslint-config-prettier
+[eslint-plugin-vue]: https://www.npmjs.com/package/eslint-plugin-vue
+[eslint-plugin-strict-vue]: https://www.npmjs.com/package/eslint-plugin-strict-vue
+[eslint-plugin-more]: https://www.npmjs.com/package/eslint-plugin-more
+[eslint-plugin-unicorn]: https://www.npmjs.com/package/eslint-plugin-unicorn
+[eslint-plugin-jest]: https://www.npmjs.com/package/eslint-plugin-jest
+[eslint-plugin-jsdoc-strict]: https://www.npmjs.com/package/eslint-plugin-jsdoc-strict
+[eslint-plugin-eslint-comments]: https://www.npmjs.com/package/eslint-plugin-eslint-comments
+[vue-cli config]: vue-cli.js
 [guidelines for contributing]: CONTRIBUTING.md
 [license]: LICENSE.md
