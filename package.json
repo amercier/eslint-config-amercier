@@ -88,6 +88,9 @@
     ],
     "env": {
       "browser": false
+    },
+    "rules": {
+      "global-require": "off"
     }
   }
 }
