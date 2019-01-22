@@ -48,10 +48,6 @@
     "configs"
   ],
   "main": "configs/index.js",
-  "scripts": {
-    "test": "eslint test",
-    "lint": "prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,yml}'"
-  },
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.10.0 || ^4.19.1",
@@ -62,6 +58,10 @@
   "peerDependencies": {
     "eslint": "^5.10.0 || ^4.19.1"
   },
+  "scripts": {
+    "test": "eslint test",
+    "lint": "prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,yml}'"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -69,5 +69,9 @@
   },
   "lint-staged": {
     "*.{js,json,md,yml}": "prettier --list-different"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }
