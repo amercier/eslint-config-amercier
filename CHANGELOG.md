@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- (nothing)
+
+## [v0.1.0] - 2019-01-22
+
 ### Added
 
 - [#4] New `vue-cli` config
@@ -27,4 +31,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#2]: https://github.com/amercier/eslint-config-amercier/pull/2
 [#3]: https://github.com/amercier/eslint-config-amercier/pull/3
 [#4]: https://github.com/amercier/eslint-config-amercier/pull/4
-[unreleased]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.0.0...HEAD
+[unreleased]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.1.0...HEAD
+[v0.1.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.0.0...v0.1.0
