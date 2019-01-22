@@ -45,9 +45,9 @@
     "all-in-one"
   ],
   "files": [
-    "index.json"
+    "configs"
   ],
-  "main": "index.json",
+  "main": "configs/index.js",
   "scripts": {
     "test": "eslint test",
     "lint": "prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,yml}'"
