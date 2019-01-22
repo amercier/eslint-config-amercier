@@ -2,6 +2,9 @@
  * All-in-one config for projects generated with [Vue CLI](https://cli.vuejs.org/).
  */
 module.exports = {
+  parserOptions: {
+    parser: require.resolve('babel-eslint'),
+  },
   extends: [
     './lib/vue.js',
     './lib/strict-vue.js',

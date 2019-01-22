@@ -42,10 +42,7 @@ Config for projects generated with [Vue CLI].
 ```json
 {
   "root": true,
-  "extends": ["amercier/vue-cli"],
-  "parserOptions": {
-    "parser": "babel-eslint"
-  }
+  "extends": ["amercier/vue-cli"]
 }
 ```
 
