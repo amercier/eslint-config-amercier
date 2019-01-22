@@ -1,3 +1,4 @@
 {
-  "extends": ["../configs/index.js"]
+  "root": true,
+  "extends": ["../vue-cli.js"]
 }
