@@ -65,7 +65,7 @@
   "scripts": {
     "test": "eslint test",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint --ignore-path .gitignore .",
+    "lint:eslint": "eslint --ignore-path .gitignore configs",
     "lint:prettier": "prettier --ignore-path .gitignore --list-different '**/*.{js,json,md,yml}'"
   },
   "husky": {
@@ -75,7 +75,7 @@
   },
   "lint-staged": {
     "*.{js,json,md,yml}": "prettier --list-different",
-    "*.js": "eslint"
+    "configs/**/*.js": "eslint"
   },
   "prettier": {
     "singleQuote": true,
