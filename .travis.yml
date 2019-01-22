@@ -4,10 +4,7 @@ matrix:
     - node_js: node # Current
     - node_js: lts/* # Latest LTS
       env: NPM_DEPLOY=true
-    - node_js: lts/carbon
-    - node_js: lts/boron
-    - node_js: 4 # Minimum required
-      install: travis_retry npm install eslint@4 && travis_retry npm install # ESLint 5 requires Node 6+
+    - node_js: lts/carbon # Minimum required (eslint-plugin-strict-vue, etc)
 before_script: npm run lint
 deploy:
   provider: npm

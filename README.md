@@ -16,11 +16,8 @@ choice is intentional, in order to simplify its usage to the minimum (ESLint's `
 
 Prerequisites:
 
-- [Node.js] 4+, **npm** 3+.
-- [ESLint] 4+
-
-> **Important:** please note [ESLint] needs to be installed alongside this module. Latest versions
-> is recommended. For Node 4 and 5, use `eslint@4`.
+- [Node.js] 8+, **npm** 3+.
+- [ESLint] 5+
 
 ```sh
 npm install --save-dev eslint
