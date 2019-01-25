@@ -1,7 +1,7 @@
 # eslint-config-amercier
 
 > My personal collection of all-in-one [ESLint shareable configs]. Most of them are based on
-> [Airbnb Javascript] and [Prettier].
+> [Airbnb Javascript] and [Prettier], with additional plugins and configs.
 
 [![Latest Stable Version](https://img.shields.io/npm/v/eslint-config-amercier.svg)](https://www.npmjs.com/package/eslint-config-amercier)
 [![Build Status](https://img.shields.io/travis/amercier/eslint-config-amercier/master.svg)](https://travis-ci.org/amercier/eslint-config-amercier)
@@ -29,7 +29,7 @@ npm install --save-dev eslint-config-amercier
 [![devDependency Status](https://img.shields.io/david/dev/amercier/eslint-config-amercier.svg)](https://david-dm.org/amercier/eslint-config-amercier#info=devDependencies)
 [![peerDependency Status](https://img.shields.io/david/peer/amercier/eslint-config-amercier.svg)](https://david-dm.org/amercier/eslint-config-amercier#info=devDependencies)
 
-## Configs
+## Base configs
 
 ### `amercier/create-react-app`
 
@@ -86,6 +86,32 @@ Config for projects generated with [Vue CLI].
 
 See [vue-cli config] for more details.
 
+## Opt-in configs
+
+This configs can be added to any base config. Each of them are independent and can be combined.
+
+### `amercier/with/flowtype`
+
+Add support for [Flow].
+
+#### Usage
+
+Example with `amercier/create-react-app`:
+
+```json
+{
+  "root": true,
+  "extends": ["amercier/create-react-app", "amercier/with-flowtype"]
+}
+```
+
+#### Included configs and plugins
+
+- [eslint-config-flowtype-strict] - no exceptions
+- [eslint-config-prettier] – `prettier/flowtype`
+
+See [with/flowtype config] for more details.
+
 ## Contributing
 
 Please read [guidelines for contributing].
@@ -106,11 +132,13 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [eslint]: https://eslint.org/
 [create react app]: https://facebook.github.io/create-react-app/
 [vue cli]: https://cli.vuejs.org/
+[flow]: https://flow.org/
 [@vue/eslint-config-airbnb]: https://www.npmjs.com/package/@vue/eslint-config-airbnb
 [@vue/eslint-config-prettier]: https://www.npmjs.com/package/@vue/eslint-config-prettier
 [eslint-config-airbnb]: https://www.npmjs.com/package/eslint-config-airbnb
 [eslint-config-prettier]: https://www.npmjs.com/package/eslint-config-prettier
 [eslint-plugin-eslint-comments]: https://www.npmjs.com/package/eslint-plugin-eslint-comments
+[eslint-config-flowtype-strict]: https://www.npmjs.com/package/eslint-config-flowtype-strict
 [eslint-plugin-jest]: https://www.npmjs.com/package/eslint-plugin-jest
 [eslint-plugin-jsdoc-strict]: https://www.npmjs.com/package/eslint-plugin-jsdoc-strict
 [eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
@@ -122,5 +150,6 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [eslint-plugin-vue]: https://www.npmjs.com/package/eslint-plugin-vue
 [create-react-app config]: create-react-app.js
 [vue-cli config]: vue-cli.js
+[with/flowtype config]: with/flowtype.js
 [guidelines for contributing]: CONTRIBUTING.md
 [license]: LICENSE.md
