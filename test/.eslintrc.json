@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["../create-react-app.js", "../vue-cli.js"]
+  "extends": ["../create-react-app.js", "../vue-cli.js", "../with/flowtype.js"]
 }
