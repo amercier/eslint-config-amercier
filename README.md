@@ -133,6 +133,31 @@ Example with `amercier/create-react-app`:
 
 See [with/redux config] for more details.
 
+### `amercier/with/redux-saga`
+
+Add support for [redux-saga].
+
+#### Usage
+
+Example with `amercier/create-react-app` and `amercier/with/redux`:
+
+```json
+{
+  "root": true,
+  "extends": [
+    "amercier/create-react-app",
+    "amercier/with-redux",
+    "amercier/with-redux-saga"
+  ]
+}
+```
+
+#### Included configs and plugins
+
+- [eslint-plugin-redux-saga] – `all` + exceptions
+
+See [with/redux-saga config] for more details.
+
 ## Contributing
 
 Please read [guidelines for contributing].
@@ -155,6 +180,7 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [vue cli]: https://cli.vuejs.org/
 [flow]: https://flow.org/
 [redux]: https://redux.js.org/
+[redux-saga]: https://redux-saga.js.org/
 [@vue/eslint-config-airbnb]: https://www.npmjs.com/package/@vue/eslint-config-airbnb
 [@vue/eslint-config-prettier]: https://www.npmjs.com/package/@vue/eslint-config-prettier
 [eslint-config-airbnb]: https://www.npmjs.com/package/eslint-config-airbnb
@@ -168,6 +194,7 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [eslint-plugin-prettier]: https://www.npmjs.com/package/eslint-plugin-prettier
 [eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
 [eslint-plugin-react-redux]: https://www.npmjs.com/package/eslint-plugin-react-redux
+[eslint-plugin-redux-saga]: https://www.npmjs.com/package/eslint-plugin-redux-saga
 [eslint-plugin-strict-vue]: https://www.npmjs.com/package/eslint-plugin-strict-vue
 [eslint-plugin-unicorn]: https://www.npmjs.com/package/eslint-plugin-unicorn
 [eslint-plugin-vue]: https://www.npmjs.com/package/eslint-plugin-vue
@@ -175,5 +202,6 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [vue-cli config]: vue-cli.js
 [with/flowtype config]: with/flowtype.js
 [with/redux config]: with/redux.js
+[with/redux-saga config]: with/redux-saga.js
 [guidelines for contributing]: CONTRIBUTING.md
 [license]: LICENSE.md
