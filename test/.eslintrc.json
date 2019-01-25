@@ -1,4 +1,10 @@
 {
   "root": true,
-  "extends": ["../create-react-app.js", "../vue-cli.js", "../with/flowtype.js"]
+  "extends": [
+    "../create-react-app.js",
+    "../vue-cli.js",
+    "../with/flowtype.js",
+    "../with/redux.js",
+    "../with/redux-saga.js"
+  ]
 }
