@@ -46,7 +46,8 @@
   ],
   "files": [
     "*.js",
-    "lib/*.js"
+    "lib/*.js",
+    "with/*.js"
   ],
   "engines": {
     "node": ">= 8"
