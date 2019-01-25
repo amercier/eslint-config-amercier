@@ -112,6 +112,27 @@ Example with `amercier/create-react-app`:
 
 See [with/flowtype config] for more details.
 
+### `amercier/with/redux`
+
+Add support for [Redux].
+
+#### Usage
+
+Example with `amercier/create-react-app`:
+
+```json
+{
+  "root": true,
+  "extends": ["amercier/create-react-app", "amercier/with-redux"]
+}
+```
+
+#### Included configs and plugins
+
+- [eslint-plugin-react-redux] – `recommended`, minus `react-redux/prefer-separate-component-file` + exceptions
+
+See [with/redux config] for more details.
+
 ## Contributing
 
 Please read [guidelines for contributing].
@@ -133,6 +154,7 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [create react app]: https://facebook.github.io/create-react-app/
 [vue cli]: https://cli.vuejs.org/
 [flow]: https://flow.org/
+[redux]: https://redux.js.org/
 [@vue/eslint-config-airbnb]: https://www.npmjs.com/package/@vue/eslint-config-airbnb
 [@vue/eslint-config-prettier]: https://www.npmjs.com/package/@vue/eslint-config-prettier
 [eslint-config-airbnb]: https://www.npmjs.com/package/eslint-config-airbnb
@@ -145,11 +167,13 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [eslint-plugin-more]: https://www.npmjs.com/package/eslint-plugin-more
 [eslint-plugin-prettier]: https://www.npmjs.com/package/eslint-plugin-prettier
 [eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
+[eslint-plugin-react-redux]: https://www.npmjs.com/package/eslint-plugin-react-redux
 [eslint-plugin-strict-vue]: https://www.npmjs.com/package/eslint-plugin-strict-vue
 [eslint-plugin-unicorn]: https://www.npmjs.com/package/eslint-plugin-unicorn
 [eslint-plugin-vue]: https://www.npmjs.com/package/eslint-plugin-vue
 [create-react-app config]: create-react-app.js
 [vue-cli config]: vue-cli.js
 [with/flowtype config]: with/flowtype.js
+[with/redux config]: with/redux.js
 [guidelines for contributing]: CONTRIBUTING.md
 [license]: LICENSE.md
