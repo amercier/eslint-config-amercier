@@ -25,7 +25,11 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['{,*.}config.js', '**/.eslintrc.js', 'tests/e2e/plugins/index.js'],
+      files: [
+        '{,*.}config.js',
+        '**/.eslintrc.js',
+        'tests/e2e/plugins/index.js',
+      ],
       env: {
         browser: false,
         node: true,
