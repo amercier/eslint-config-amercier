@@ -1,6 +1,7 @@
 # eslint-config-amercier
 
-> My personal collection of all-in-one [ESLint shareable configs].
+> My personal collection of all-in-one [ESLint shareable configs]. Most of them are based on
+> [Airbnb Javascript] and [Prettier].
 
 [![Latest Stable Version](https://img.shields.io/npm/v/eslint-config-amercier.svg)](https://www.npmjs.com/package/eslint-config-amercier)
 [![Build Status](https://img.shields.io/travis/amercier/eslint-config-amercier/master.svg)](https://travis-ci.org/amercier/eslint-config-amercier)
@@ -30,6 +31,34 @@ npm install --save-dev eslint-config-amercier
 
 ## Configs
 
+### `amercier/create-react-app`
+
+Config for projects generated with [Create React App].
+
+#### Usage
+
+```json
+{
+  "root": true,
+  "extends": ["amercier/create-react-app"]
+}
+```
+
+#### Included configs and plugins
+
+- [eslint-config-airbnb]
+- [eslint-plugin-react] – `recommended`
+- [eslint-plugin-more] – `recommended`, minus `more/no-window`
+- [eslint-plugin-jsx-a11y] – `recommended`
+- [eslint-plugin-unicorn] – `recommended` + exceptions
+- [eslint-plugin-prettier] – `recommended`
+- [eslint-plugin-jest] – `recommended` + `style` + more rules
+- [eslint-plugin-jsdoc-strict] – no exceptions
+- [eslint-plugin-eslint-comments] – `recommended`
+- [eslint-config-prettier] – `prettier` + `prettier/react` + `prettier/unicorn`
+
+See [create-react-app config] for more details.
+
 ### `amercier/vue-cli`
 
 Config for projects generated with [Vue CLI].
@@ -47,13 +76,13 @@ Config for projects generated with [Vue CLI].
 
 - [@vue/eslint-config-airbnb]
 - [@vue/eslint-config-prettier]
-- [eslint-plugin-vue]: `recommended` + more rules
-- [eslint-plugin-strict-vue]: all rules
-- [eslint-plugin-more]: `recommended`
-- [eslint-plugin-unicorn]: `recommended` + exceptions
-- [eslint-plugin-jest]: `recommended` + `style` + more rules
-- [eslint-plugin-jsdoc-strict]: no exceptions
-- [eslint-plugin-eslint-comments]: `recommended`
+- [eslint-plugin-vue] – `recommended` + more rules
+- [eslint-plugin-strict-vue] – all rules
+- [eslint-plugin-more] – `recommended`, minus `more/no-window`
+- [eslint-plugin-unicorn] – `recommended` + exceptions
+- [eslint-plugin-jest] – `recommended` + `style` + more rules
+- [eslint-plugin-jsdoc-strict] – no exceptions
+- [eslint-plugin-eslint-comments] – `recommended`
 
 See [vue-cli config] for more details.
 
@@ -70,19 +99,28 @@ Please read [guidelines for contributing].
 This ESLint config was created using [eslint-config-template](https://github.com/amercier/eslint-config-template)
 
 [eslint shareable configs]: https://eslint.org/docs/developer-guide/shareable-configs
+[airbnb javascript]: https://github.com/airbnb/javascript
+[prettier]: https://prettier.io
 [peer dependencies]: https://nodejs.org/en/blog/npm/peer-dependencies/
 [node.js]: https://nodejs.org/
 [eslint]: https://eslint.org/
+[create react app]: https://facebook.github.io/create-react-app/
 [vue cli]: https://cli.vuejs.org/
 [@vue/eslint-config-airbnb]: https://www.npmjs.com/package/@vue/eslint-config-airbnb
 [@vue/eslint-config-prettier]: https://www.npmjs.com/package/@vue/eslint-config-prettier
-[eslint-plugin-vue]: https://www.npmjs.com/package/eslint-plugin-vue
-[eslint-plugin-strict-vue]: https://www.npmjs.com/package/eslint-plugin-strict-vue
-[eslint-plugin-more]: https://www.npmjs.com/package/eslint-plugin-more
-[eslint-plugin-unicorn]: https://www.npmjs.com/package/eslint-plugin-unicorn
+[eslint-config-airbnb]: https://www.npmjs.com/package/eslint-config-airbnb
+[eslint-config-prettier]: https://www.npmjs.com/package/eslint-config-prettier
+[eslint-plugin-eslint-comments]: https://www.npmjs.com/package/eslint-plugin-eslint-comments
 [eslint-plugin-jest]: https://www.npmjs.com/package/eslint-plugin-jest
 [eslint-plugin-jsdoc-strict]: https://www.npmjs.com/package/eslint-plugin-jsdoc-strict
-[eslint-plugin-eslint-comments]: https://www.npmjs.com/package/eslint-plugin-eslint-comments
+[eslint-plugin-jsx-a11y]: https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+[eslint-plugin-more]: https://www.npmjs.com/package/eslint-plugin-more
+[eslint-plugin-prettier]: https://www.npmjs.com/package/eslint-plugin-prettier
+[eslint-plugin-react]: https://www.npmjs.com/package/eslint-plugin-react
+[eslint-plugin-strict-vue]: https://www.npmjs.com/package/eslint-plugin-strict-vue
+[eslint-plugin-unicorn]: https://www.npmjs.com/package/eslint-plugin-unicorn
+[eslint-plugin-vue]: https://www.npmjs.com/package/eslint-plugin-vue
+[create-react-app config]: create-react-app.js
 [vue-cli config]: vue-cli.js
 [guidelines for contributing]: CONTRIBUTING.md
 [license]: LICENSE.md
