@@ -20,7 +20,17 @@ module.exports = {
     browser: true,
     node: false,
   },
+  globals: {
+    process: true,
+  },
   overrides: [
+    {
+      files: ['{,*.}config.js', '**/.eslintrc.js', 'tests/e2e/plugins/index.js'],
+      env: {
+        browser: false,
+        node: true,
+      },
+    },
     {
       files: '**/*.vue',
       rules: {
