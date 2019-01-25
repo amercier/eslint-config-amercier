@@ -10,16 +10,31 @@ module.exports = {
     './lib/strict-vue.js',
     '@vue/airbnb',
     '@vue/prettier',
-    'plugin:more/recommended',
+    './lib/more.js',
     'plugin:unicorn/recommended',
     './lib/jest.js',
     'jsdoc-strict',
     'plugin:eslint-comments/recommended',
   ],
-  plugins: [
-    'more', // TODO Remove once https://github.com/WebbyLab/eslint-plugin-more/pull/30 is merged.
-  ],
+  env: {
+    browser: true,
+    node: false,
+  },
+  globals: {
+    process: true,
+  },
   overrides: [
+    {
+      files: [
+        '{,*.}config.js',
+        '**/.eslintrc.js',
+        'tests/e2e/plugins/index.js',
+      ],
+      env: {
+        browser: false,
+        node: true,
+      },
+    },
     {
       files: '**/*.vue',
       rules: {

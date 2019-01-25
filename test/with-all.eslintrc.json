@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "../with/flowtype.js",
+    "../with/redux.js",
+    "../with/redux-saga.js"
+  ]
+}
