@@ -19,6 +19,10 @@ module.exports = {
   plugins: [
     'more', // TODO Remove once https://github.com/WebbyLab/eslint-plugin-more/pull/30 is merged.
   ],
+  env: {
+    browser: true,
+    node: false,
+  },
   overrides: [
     {
       files: '**/*.vue',
