@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["../../vue-cli.js", "../with-all.eslintrc.json"],
+  "parser": "vue-eslint-parser"
+}

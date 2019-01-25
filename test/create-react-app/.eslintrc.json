@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["../../create-react-app.js", "../with-all.eslintrc.json"]
+}
