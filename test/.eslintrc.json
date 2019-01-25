@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["../vue-cli.js"]
+  "extends": ["../create-react-app.js", "../vue-cli.js"]
 }
