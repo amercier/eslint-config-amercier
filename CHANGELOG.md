@@ -6,7 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- (nothing)
+### Added
+
+- [#5] New configs:
+  - `amercier/create-react-app`: a config for projects generated with [Create React App];
+  - `amercier/with/flowtype`: an opt-in config for to add [Flow] support to an all-in-one config;
+  - `amercier/with/redux`: an opt-in config for to add [Redux] support to an all-in-one config;
+  - `amercier/with/redux-saga`: an opt-in config for to add [redux-saga] support to an all-in-one config.
 
 ## [v0.1.0] - 2019-01-22
 
@@ -27,9 +33,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#1] Project setup.
 
 [eslint-config-template]: https://github.com/amercier/eslint-config-template
+[create react app]: https://facebook.github.io/create-react-app/
+[flow]: https://flow.org/
+[redux]: https://redux.js.org/
+[redux-saga]: https://redux-saga.js.org/
 [#1]: https://github.com/amercier/eslint-config-amercier/pull/1
 [#2]: https://github.com/amercier/eslint-config-amercier/pull/2
 [#3]: https://github.com/amercier/eslint-config-amercier/pull/3
 [#4]: https://github.com/amercier/eslint-config-amercier/pull/4
+[#5]: https://github.com/amercier/eslint-config-amercier/pull/5
 [unreleased]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.1.0...HEAD
 [v0.1.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.0.0...v0.1.0
