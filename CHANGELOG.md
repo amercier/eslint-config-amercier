@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 (nothing)
 
+## [v0.3.0] - 2019-01-27
+
+### Added
+
+- Mentioned Prettier options in docs.
+
+### Changed
+
+- [#6] Cleaned up dependencies.
+
 ## [v0.2.0] - 2019-01-25
 
 ### Added
@@ -46,6 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#3]: https://github.com/amercier/eslint-config-amercier/pull/3
 [#4]: https://github.com/amercier/eslint-config-amercier/pull/4
 [#5]: https://github.com/amercier/eslint-config-amercier/pull/5
-[unreleased]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.2.0...HEAD
+[#6]: https://github.com/amercier/eslint-config-amercier/pull/6
+[unreleased]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.3.0...HEAD
+[v0.3.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.0.0...v0.1.0
