@@ -31,6 +31,15 @@ npm install --save-dev eslint-config-amercier
 
 ## Base configs
 
+Every base config is designed with the following [Prettier options] in mind:
+
+```json
+{
+  "singleQuote": true,
+  "trailingComma": "all"
+}
+```
+
 ### `amercier/create-react-app`
 
 Config for projects generated with [Create React App].
@@ -173,6 +182,7 @@ This ESLint config was created using [eslint-config-template](https://github.com
 [eslint shareable configs]: https://eslint.org/docs/developer-guide/shareable-configs
 [airbnb javascript]: https://github.com/airbnb/javascript
 [prettier]: https://prettier.io
+[prettier options]: https://prettier.io/docs/en/options.html
 [peer dependencies]: https://nodejs.org/en/blog/npm/peer-dependencies/
 [node.js]: https://nodejs.org/
 [eslint]: https://eslint.org/
