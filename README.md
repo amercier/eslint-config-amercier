@@ -10,8 +10,8 @@
 ## All-in-one?
 
 Unlike most [ESLint shareable configs], which declare [peer dependencies], this NPM package declares
-all its dependencies as `dependencies` directly, with the exception of [ESLint] itself. This design
-choice is intentional, in order to simplify its usage to the minimum (ESLint's `extends` field).
+all its included ESLint plugins and configs as `dependencies` directly. This design choice is
+intentional, in order to simplify its usage to the minimum (ESLint's `extends` field).
 
 ## Installation
 
