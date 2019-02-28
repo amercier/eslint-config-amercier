@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-(nothing)
+### Changed
+
+- Set peer dependencies as optional.
 
 ## [v0.3.0] - 2019-01-27
 
