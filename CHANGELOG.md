@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(nothing)
+
+## [v0.3.1] - 2019-02-28
+
 ### Changed
 
 - Set peer dependencies as optional.
@@ -59,7 +63,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#4]: https://github.com/amercier/eslint-config-amercier/pull/4
 [#5]: https://github.com/amercier/eslint-config-amercier/pull/5
 [#6]: https://github.com/amercier/eslint-config-amercier/pull/6
-[unreleased]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.3.0...HEAD
+[unreleased]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.3.1...HEAD
+[v0.3.1]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.3.0...v0.3.1
 [v0.3.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/amercier/eslint-config-jsdoc-strict/compare/v0.0.0...v0.1.0
