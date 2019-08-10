@@ -56,7 +56,7 @@
     "@vue/eslint-config-airbnb": "^4.0.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb": "^18.0.0",
     "eslint-config-flowtype-strict": "^0.2.0",
     "eslint-config-jsdoc-strict": "^2.0.0",
     "eslint-config-prettier": "^4.0.0",
