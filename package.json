@@ -72,7 +72,7 @@
     "eslint-plugin-react-redux": "^3.0.0",
     "eslint-plugin-redux-saga": "^1.0.0",
     "eslint-plugin-strict-vue": "^1.0.0",
-    "eslint-plugin-unicorn": "^8.0.0",
+    "eslint-plugin-unicorn": "^12.1.0",
     "eslint-plugin-vue": "vuejs/eslint-plugin-vue"
   },
   "devDependencies": {
