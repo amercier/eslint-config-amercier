@@ -59,7 +59,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-flowtype-strict": "^0.2.0",
     "eslint-config-jsdoc-strict": "^2.0.0",
-    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-prettier": "^6.8.0",
     "eslint-plugin-eslint-comments": "^3.0.1",
     "eslint-plugin-flowtype": "^3.2.1",
     "eslint-plugin-import": "^2.14.0",
