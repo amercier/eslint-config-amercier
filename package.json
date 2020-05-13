@@ -68,7 +68,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-more": "^0.3.2",
     "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-redux": "^3.0.0",
     "eslint-plugin-redux-saga": "^1.0.0",
     "eslint-plugin-strict-vue": "^1.0.0",
