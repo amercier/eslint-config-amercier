@@ -49,5 +49,8 @@
   },
   "peerDependencies": {
     "eslint": "*"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
