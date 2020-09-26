@@ -29,10 +29,10 @@ function getConfigRules(...configNames) {
 }
 
 module.exports = {
+  getPluginRuleNames,
   eslintBaseRuleNames:
     // eslint-disable-next-line global-require
     [...require('eslint/lib/rules').keys()],
-  importPluginRuleNames: getPluginRuleNames('import'),
   airbnbConfigRules: getConfigRules('airbnb'),
   prettierConfigRules: getConfigRules(
     'prettier',
