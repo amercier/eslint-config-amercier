@@ -30,6 +30,7 @@ function getConfigRules(...configNames) {
 
 module.exports = {
   getPluginRuleNames,
+  getConfigRules,
   eslintBaseRuleNames:
     // eslint-disable-next-line global-require
     [...require('eslint/lib/rules').keys()],

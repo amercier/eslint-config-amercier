@@ -46,6 +46,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.4.2",
     "lodash": "^4.17.20",
@@ -58,6 +59,7 @@
     "eslint-plugin-node": "*",
     "eslint-plugin-promise": "*",
     "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
     "eslint-plugin-standard": "*"
   },
   "scripts": {
