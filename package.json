@@ -51,7 +51,8 @@
   },
   "peerDependencies": {
     "eslint": "*",
-    "eslint-plugin-import": "*"
+    "eslint-plugin-import": "*",
+    "eslint-plugin-promise": "*"
   },
   "scripts": {
     "test": "jest"
