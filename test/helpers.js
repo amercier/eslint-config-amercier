@@ -44,5 +44,5 @@ module.exports = {
     'prettier/unicorn',
     'prettier/vue',
   ),
-  standardConfigRules: getConfigRules('standard'),
+  standardConfigRules: getConfigRules('standard', 'standard-react'),
 }
