@@ -55,7 +55,8 @@
     "eslint": "*",
     "eslint-plugin-import": "*",
     "eslint-plugin-node": "*",
-    "eslint-plugin-promise": "*"
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-standard": "*"
   },
   "scripts": {
     "lint": "run-s lint:prettier lint:eslint",
