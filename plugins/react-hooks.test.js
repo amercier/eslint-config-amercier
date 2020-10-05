@@ -9,9 +9,9 @@ const { rules } = require('./react-hooks')
 
 const REACT_HOOKS_PLUGIN_RULE_NAMES = getPluginRuleNames('react-hooks')
 
-const reactHooksRecommendedConfigRules = getConfigRules(
+const reactHooksRecommendedConfigRules = getConfigRules([
   'plugin:react-hooks/recommended',
-)
+])
 
 it('are alphabetically ordered', () => {
   const compare = (a, b) => (a < b ? -1 : 1)

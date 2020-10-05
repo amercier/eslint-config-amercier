@@ -17,25 +17,20 @@ function getPluginRuleNames(pluginName) {
   return Object.keys(rules).map((ruleName) => `${pluginName}/${ruleName}`)
 }
 
-function getConfigRules(...configNames) {
+function getConfigRules(configNames, filename = 'index.js') {
   const baseConfig = { extends: configNames }
   const configArrayFactory = new CascadingConfigArrayFactory({
     baseConfig,
   })
-    .getConfigArrayForFile(`${__dirname}/../index.js`)
+    .getConfigArrayForFile(`${__dirname}/../${filename}`)
     .extractConfig()
 
   return mapValues(configArrayFactory.rules, normalizeRule)
 }
 
-module.exports = {
-  getPluginRuleNames,
-  getConfigRules,
-  eslintBaseRuleNames:
-    // eslint-disable-next-line global-require
-    [...require('eslint/lib/rules').keys()],
-  airbnbConfigRules: getConfigRules('airbnb'),
-  prettierConfigRules: getConfigRules(
+const configs = {
+  airbnb: ['airbnb'],
+  prettier: [
     'prettier',
     'prettier/@typescript-eslint',
     'prettier/babel',
@@ -44,6 +39,18 @@ module.exports = {
     'prettier/standard',
     'prettier/unicorn',
     'prettier/vue',
-  ),
-  standardConfigRules: getConfigRules('standard', 'standard-react'),
+  ],
+  standard: ['standard', 'standard-react'],
+}
+
+module.exports = {
+  getPluginRuleNames,
+  getConfigRules,
+  eslintBaseRuleNames:
+    // eslint-disable-next-line global-require
+    [...require('eslint/lib/rules').keys()],
+  configs,
+  airbnbConfigRules: getConfigRules(configs.airbnb),
+  prettierConfigRules: getConfigRules(configs.prettier),
+  standardConfigRules: getConfigRules(configs.standard),
 }
