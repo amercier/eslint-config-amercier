@@ -9,7 +9,7 @@ module.exports = {
   extends: ['./plugins/eslint'],
   overrides: [
     {
-      files: ['**/*.test.js'],
+      files: ['**/*.spec.js'],
       env: {
         jest: true,
       },
