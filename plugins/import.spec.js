@@ -29,16 +29,16 @@ describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
     it('follows Prettier rule', async () => {
       expect(rule).toStrictEqual(prettierConfigRules[ruleName])
     })
-  } else if (standardConfigRules[ruleName]) {
-    it('follows Standard rule', async () => {
-      expect(rule).toStrictEqual(standardConfigRules[ruleName])
-    })
   } else if (
     airbnbConfigRules[ruleName] &&
     !AIRBNB_DISABLED_RULES.includes(ruleName)
   ) {
     it('follows Airbnb rule', async () => {
       expect(rule).toStrictEqual(airbnbConfigRules[ruleName])
+    })
+  } else if (standardConfigRules[ruleName]) {
+    it('follows Standard rule', async () => {
+      expect(rule).toStrictEqual(standardConfigRules[ruleName])
     })
   } else {
     it('is OFF', async () => {

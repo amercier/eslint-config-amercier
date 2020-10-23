@@ -71,9 +71,9 @@ module.exports = {
       },
     ],
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
-    'react/jsx-boolean-value': 'error',
+    'react/jsx-boolean-value': ['error', 'never', { always: [] }],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
     'react/jsx-child-element-spacing': 'off',
@@ -110,9 +110,12 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md
     'react/jsx-fragments': ['error', 'syntax'],
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
-    'react/jsx-handler-names': 'error',
+    'react/jsx-handler-names': [
+      'off',
+      { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' },
+    ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
     'react/jsx-indent': 'off',
@@ -120,9 +123,10 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
     'react/jsx-indent-props': 'off',
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
+    // Read more: https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
-    'react/jsx-key': 'error',
+    'react/jsx-key': 'off',
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md
     'react/jsx-max-depth': 'off',
@@ -130,7 +134,7 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
     'react/jsx-max-props-per-line': 'off',
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
     'react/jsx-no-bind': [
       'error',
@@ -138,7 +142,7 @@ module.exports = {
         allowArrowFunctions: true,
         allowBind: false,
         allowFunctions: false,
-        ignoreDOMComponents: false,
+        ignoreDOMComponents: true,
         ignoreRefs: true,
       },
     ],
@@ -147,9 +151,9 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
     'react/jsx-no-comment-textnodes': 'error',
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
-    'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
 
     // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
@@ -173,9 +177,9 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
     'react/jsx-one-expression-per-line': 'off',
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
-    'react/jsx-pascal-case': ['error', { allowAllCaps: false }],
+    'react/jsx-pascal-case': ['error', { allowAllCaps: true, ignore: [] }],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-multi-spaces.md
     'react/jsx-props-no-multi-spaces': 'off',
@@ -309,9 +313,12 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
     'react/no-unsafe': 'off',
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
-    'react/no-unused-prop-types': 'error',
+    'react/no-unused-prop-types': [
+      'error',
+      { customValidators: [], skipShapeProps: true },
+    ],
 
     // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md
@@ -335,9 +342,12 @@ module.exports = {
       { ignorePureComponents: true },
     ],
 
-    // Taken from eslint-config-standard-react
+    // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
-    'react/prop-types': 'error',
+    'react/prop-types': [
+      'error',
+      { customValidators: [], ignore: [], skipUndeclared: false },
+    ],
 
     // Taken from eslint-config-standard-react
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md

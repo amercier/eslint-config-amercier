@@ -53,10 +53,7 @@ module.exports = {
 
     // Taken from eslint-config-airbnb-base
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
-    'import/no-absolute-path': [
-      'error',
-      { amd: false, commonjs: true, esmodule: true },
-    ],
+    'import/no-absolute-path': 'error',
 
     // Taken from eslint-config-airbnb-base
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
