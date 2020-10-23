@@ -33,6 +33,9 @@ const AIRBNB_ENABLED_RULES = [
   'prefer-exponentiation-operator',
 ]
 
+const enabledRule = (rule, level = 'error') =>
+  Array.isArray(rule) ? [level, ...rule.slice(1)] : level
+
 describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
   it('matches an existing rule', () => {
     expect(eslintBaseRuleNames).toContain(ruleName)
@@ -46,14 +49,15 @@ describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
     it('follows Standard rule', async () => {
       expect(rule).toStrictEqual(standardConfigRules[ruleName])
     })
-  } else if (
-    airbnbConfigRules[ruleName] &&
-    AIRBNB_ENABLED_RULES.includes(ruleName)
-  ) {
+  } else if (AIRBNB_ENABLED_RULES.includes(ruleName)) {
+    it('follows Airbnb rule (enabled)', async () => {
+      expect(rule).toStrictEqual(enabledRule(airbnbConfigRules[ruleName]))
+    })
+  } else if (airbnbConfigRules[ruleName]) {
     it('follows Airbnb rule', async () => {
       expect(rule).toStrictEqual(airbnbConfigRules[ruleName])
     })
-  } else if (!airbnbConfigRules[ruleName]) {
+  } else {
     it('is OFF', async () => {
       expect(rule).toStrictEqual('off')
     })
