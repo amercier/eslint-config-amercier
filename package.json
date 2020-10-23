@@ -31,6 +31,10 @@
     "verify",
     "amercier"
   ],
+  "files": [
+    "./*.js",
+    "./plugins/*"
+  ],
   "dependencies": {
     "confusing-browser-globals": "^1.0.9",
     "http-methods-constants": "^1.1.0"
