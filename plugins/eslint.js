@@ -1,7 +1,16 @@
 const confusingBrowserGlobals = require('confusing-browser-globals')
+const compare = require('semver-compare')
+const { pickBy } = require('lodash')
+
+const { ESLint } = require('eslint')
+
+const eslintVersion = process.env.ESLINT_VERSION || ESLint.version
+
+const fromVersion = (version, value) =>
+  compare(eslintVersion, version) >= 0 ? value : null
 
 module.exports = {
-  rules: {
+  rules: pickBy({
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/accessor-pairs
     'accessor-pairs': 'error',
@@ -119,7 +128,7 @@ module.exports = {
 
     // Taken from eslint-config-airbnb-base (and enabled)
     // https://eslint.org/docs/rules/default-case-last
-    'default-case-last': 'error',
+    'default-case-last': fromVersion('7.0.0', 'error'),
 
     // Taken from eslint-config-airbnb-base (and enabled)
     // https://eslint.org/docs/rules/default-param-last
@@ -154,7 +163,10 @@ module.exports = {
     'func-name-matching': [
       'off',
       'always',
-      { includeCommonJSModuleExports: false, considerPropertyDescriptor: true },
+      {
+        includeCommonJSModuleExports: false,
+        considerPropertyDescriptor: true,
+      },
     ],
 
     // Taken from eslint-config-airbnb-base
@@ -590,7 +602,7 @@ module.exports = {
 
     // Taken from eslint-config-airbnb-base (and enabled)
     // https://eslint.org/docs/rules/no-loss-of-precision
-    'no-loss-of-precision': 'error',
+    'no-loss-of-precision': fromVersion('7.1.0', 'error'),
 
     // Taken from eslint-config-airbnb-base
     // https://eslint.org/docs/rules/no-magic-numbers
@@ -728,7 +740,7 @@ module.exports = {
 
     // Taken from eslint-config-airbnb-base (and enabled)
     // https://eslint.org/docs/rules/no-promise-executor-return
-    'no-promise-executor-return': 'error',
+    'no-promise-executor-return': fromVersion('7.3.0', 'error'),
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-proto
@@ -748,10 +760,10 @@ module.exports = {
 
     // Taken from eslint-config-airbnb-base (and enabled)
     // https://eslint.org/docs/rules/no-restricted-exports
-    'no-restricted-exports': [
+    'no-restricted-exports': fromVersion('7.0.0', [
       'error',
       { restrictedNamedExports: ['default', 'then'] },
-    ],
+    ]),
 
     // Taken from eslint-config-airbnb-base
     // https://eslint.org/docs/rules/no-restricted-globals
@@ -961,7 +973,7 @@ module.exports = {
 
     // Taken from eslint-config-airbnb-base (and enabled)
     // https://eslint.org/docs/rules/no-unreachable-loop
-    'no-unreachable-loop': ['error', { ignore: [] }],
+    'no-unreachable-loop': fromVersion('7.3.0', ['error', { ignore: [] }]),
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-unsafe-finally
@@ -1002,7 +1014,7 @@ module.exports = {
 
     // Taken from eslint-config-airbnb-base (and enabled)
     // https://eslint.org/docs/rules/no-useless-backreference
-    'no-useless-backreference': 'error',
+    'no-useless-backreference': fromVersion('7.0.0', 'error'),
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-useless-call
@@ -1323,5 +1335,5 @@ module.exports = {
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/yoda
     yoda: ['error', 'never'],
-  },
+  }),
 }
