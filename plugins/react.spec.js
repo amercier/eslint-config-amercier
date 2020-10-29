@@ -6,6 +6,7 @@ const {
 } = require('../test/helpers')
 const { rules } = require('./react')
 
+const CUSTOM_RULES = ['react/prop-types']
 const REACT_PLUGIN_RULE_NAMES = getPluginRuleNames('react')
 const AIRBNB_DISABLED_RULES = ['react/jsx-filename-extension']
 
@@ -25,7 +26,11 @@ describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
     expect(REACT_PLUGIN_RULE_NAMES).toContain(ruleName)
   })
 
-  if (prettierConfigRules[ruleName]) {
+  if (CUSTOM_RULES.includes(ruleName)) {
+    it('has custom definition', () => {
+      expect(rule).not.toStrictEqual('off')
+    })
+  } else if (prettierConfigRules[ruleName]) {
     it('follows Prettier rule', async () => {
       expect(rule).toStrictEqual(prettierConfigRules[ruleName])
     })

@@ -1,5 +1,10 @@
 module.exports = {
   plugins: ['react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     // Taken from eslint-config-airbnb
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
@@ -342,11 +347,11 @@ module.exports = {
       { ignorePureComponents: true },
     ],
 
-    // Taken from eslint-config-airbnb
+    // Custom (inspired from eslint-config-airbnb, but set skipUndeclared to be less intrusive)
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
     'react/prop-types': [
       'error',
-      { customValidators: [], ignore: [], skipUndeclared: false },
+      { customValidators: [], ignore: [], skipUndeclared: true },
     ],
 
     // Taken from eslint-config-standard-react
