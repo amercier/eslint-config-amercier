@@ -23,4 +23,10 @@ module.exports = {
     './plugins/react-hooks',
     './plugins/react',
   ],
+  rules: {
+    // Custom (disabled because it's common with libraries such as
+    // @testing-library/* to have no explicit assertion)
+    // https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/expect-expect.md
+    'jest/expect-expect': 'off',
+  },
 }
