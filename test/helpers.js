@@ -22,13 +22,13 @@ function getConfigRules(configNames, filename = 'index.js') {
   const configArrayFactory = new CascadingConfigArrayFactory({
     baseConfig,
   })
-    .getConfigArrayForFile(`${__dirname}/../${filename}`)
+    .getConfigArrayForFile(`/${filename}`)
     .extractConfig()
 
   return mapValues(configArrayFactory.rules, normalizeRule)
 }
 
-const configs = {
+const CONFIGS = {
   airbnb: ['airbnb'],
   prettier: [
     'prettier',
@@ -49,8 +49,8 @@ module.exports = {
   eslintBaseRuleNames:
     // eslint-disable-next-line global-require
     [...require('eslint/lib/rules').keys()],
-  configs,
-  airbnbConfigRules: getConfigRules(configs.airbnb),
-  prettierConfigRules: getConfigRules(configs.prettier),
-  standardConfigRules: getConfigRules(configs.standard),
+  CONFIGS,
+  airbnbConfigRules: getConfigRules(CONFIGS.airbnb),
+  prettierConfigRules: getConfigRules(CONFIGS.prettier),
+  standardConfigRules: getConfigRules(CONFIGS.standard),
 }

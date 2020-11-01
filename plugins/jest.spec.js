@@ -1,16 +1,16 @@
 const {
   getConfigRules,
   getPluginRuleNames,
-  configs,
+  CONFIGS,
 } = require('../test/helpers')
 const { rules } = require('./jest')
 
 const FILENAME = 'index.test.js'
 const JEST_PLUGIN_RULE_NAMES = getPluginRuleNames('jest')
 
-const airbnbConfigRules = getConfigRules(configs.airbnb, FILENAME)
-const prettierConfigRules = getConfigRules(configs.prettier, FILENAME)
-const standardConfigRules = getConfigRules(configs.standard, FILENAME)
+const airbnbConfigRules = getConfigRules(CONFIGS.airbnb, FILENAME)
+const prettierConfigRules = getConfigRules(CONFIGS.prettier, FILENAME)
+const standardConfigRules = getConfigRules(CONFIGS.standard, FILENAME)
 const jestRecommendedConfigRules = getConfigRules(
   ['plugin:jest/recommended'],
   FILENAME,
@@ -46,7 +46,11 @@ describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
     expect(JEST_PLUGIN_RULE_NAMES).toContain(ruleName)
   })
 
-  if (prettierConfigRules[ruleName]) {
+  if (CUSTOM_RULES.includes(ruleName)) {
+    it('has custom definition', () => {
+      expect(rule).not.toStrictEqual('off')
+    })
+  } else if (prettierConfigRules[ruleName]) {
     it('follows Prettier rule', async () => {
       expect(rule).toStrictEqual(prettierConfigRules[ruleName])
     })
@@ -65,10 +69,6 @@ describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
   } else if (jestStyleConfigRules[ruleName]) {
     it('follows plugin:jest/style rule', async () => {
       expect(rule).toStrictEqual(jestStyleConfigRules[ruleName])
-    })
-  } else if (CUSTOM_RULES.includes(ruleName)) {
-    it('has custom definition', () => {
-      expect(rule).not.toStrictEqual('off')
     })
   } else {
     it('is OFF', async () => {

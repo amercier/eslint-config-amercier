@@ -11,9 +11,9 @@ const fromVersion = (version, value) =>
 
 module.exports = {
   rules: pickBy({
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/accessor-pairs
-    'accessor-pairs': 'error',
+    'accessor-pairs': 'off',
 
     // Disabled for Prettier
     // https://eslint.org/docs/rules/array-bracket-newline
@@ -23,7 +23,7 @@ module.exports = {
     // https://eslint.org/docs/rules/array-bracket-spacing
     'array-bracket-spacing': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/array-callback-return
     'array-callback-return': ['error', { allowImplicit: true }],
 
@@ -43,7 +43,7 @@ module.exports = {
     // https://eslint.org/docs/rules/arrow-spacing
     'arrow-spacing': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/block-scoped-var
     'block-scoped-var': 'error',
 
@@ -55,15 +55,15 @@ module.exports = {
     // https://eslint.org/docs/rules/brace-style
     'brace-style': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/callback-return
     'callback-return': 'off',
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/camelcase
-    camelcase: ['error', { properties: 'never' }],
+    camelcase: ['error', { properties: 'never', ignoreDestructuring: false }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/capitalized-comments
     'capitalized-comments': [
       'off',
@@ -82,9 +82,31 @@ module.exports = {
       },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/class-methods-use-this
-    'class-methods-use-this': ['error', { exceptMethods: [] }],
+    'class-methods-use-this': [
+      'error',
+      {
+        exceptMethods: [
+          'render',
+          'getInitialState',
+          'getDefaultProps',
+          'getChildContext',
+          'componentWillMount',
+          'UNSAFE_componentWillMount',
+          'componentDidMount',
+          'componentWillReceiveProps',
+          'UNSAFE_componentWillReceiveProps',
+          'shouldComponentUpdate',
+          'componentWillUpdate',
+          'UNSAFE_componentWillUpdate',
+          'componentDidUpdate',
+          'componentWillUnmount',
+          'componentDidCatch',
+          'getSnapshotBeforeUpdate',
+        ],
+      },
+    ],
 
     // Disabled for Prettier
     // https://eslint.org/docs/rules/comma-dangle
@@ -98,7 +120,7 @@ module.exports = {
     // https://eslint.org/docs/rules/comma-style
     'comma-style': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/complexity
     complexity: ['off', 11],
 
@@ -106,11 +128,11 @@ module.exports = {
     // https://eslint.org/docs/rules/computed-property-spacing
     'computed-property-spacing': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/consistent-return
     'consistent-return': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/consistent-this
     'consistent-this': 'off',
 
@@ -122,15 +144,15 @@ module.exports = {
     // https://eslint.org/docs/rules/curly
     curly: 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/default-case
     'default-case': ['error', { commentPattern: '^no default$' }],
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/default-case-last
     'default-case-last': fromVersion('7.0.0', 'error'),
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/default-param-last
     'default-param-last': 'error',
 
@@ -150,7 +172,7 @@ module.exports = {
     // https://eslint.org/docs/rules/eqeqeq
     eqeqeq: ['error', 'always', { null: 'ignore' }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/for-direction
     'for-direction': 'error',
 
@@ -158,7 +180,7 @@ module.exports = {
     // https://eslint.org/docs/rules/func-call-spacing
     'func-call-spacing': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/func-name-matching
     'func-name-matching': [
       'off',
@@ -169,11 +191,11 @@ module.exports = {
       },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/func-names
     'func-names': 'warn',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/func-style
     'func-style': ['off', 'expression'],
 
@@ -189,39 +211,39 @@ module.exports = {
     // https://eslint.org/docs/rules/generator-star-spacing
     'generator-star-spacing': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/getter-return
     'getter-return': ['error', { allowImplicit: true }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/global-require
     'global-require': 'error',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/grouped-accessor-pairs
     'grouped-accessor-pairs': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/guard-for-in
     'guard-for-in': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-aibnb
     // https://eslint.org/docs/rules/handle-callback-err
-    'handle-callback-err': ['error', '^(err|error)$'],
+    'handle-callback-err': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/id-blacklist
     'id-blacklist': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/id-denylist
     'id-denylist': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/id-length
     'id-length': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/id-match
     'id-match': 'off',
 
@@ -237,7 +259,7 @@ module.exports = {
     // https://eslint.org/docs/rules/indent-legacy
     'indent-legacy': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/init-declarations
     'init-declarations': 'off',
 
@@ -253,7 +275,7 @@ module.exports = {
     // https://eslint.org/docs/rules/keyword-spacing
     'keyword-spacing': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/line-comment-position
     'line-comment-position': [
       'off',
@@ -268,23 +290,23 @@ module.exports = {
     // https://eslint.org/docs/rules/lines-around-comment
     'lines-around-comment': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/lines-around-directive
     'lines-around-directive': ['error', { before: 'always', after: 'always' }],
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/lines-between-class-members
     'lines-between-class-members': [
       'error',
       'always',
-      { exceptAfterSingleLine: true },
+      { exceptAfterSingleLine: false },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-classes-per-file
     'max-classes-per-file': ['error', 1],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-depth
     'max-depth': ['off', 4],
 
@@ -292,37 +314,37 @@ module.exports = {
     // https://eslint.org/docs/rules/max-len
     'max-len': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-lines
     'max-lines': [
       'off',
       { max: 300, skipBlankLines: true, skipComments: true },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-lines-per-function
     'max-lines-per-function': [
       'off',
       { max: 50, skipBlankLines: true, skipComments: true, IIFEs: true },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-nested-callbacks
     'max-nested-callbacks': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-params
     'max-params': ['off', 3],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-statements
     'max-statements': ['off', 10],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/max-statements-per-line
     'max-statements-per-line': ['off', { max: 1 }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/multiline-comment-style
     'multiline-comment-style': ['off', 'starred-block'],
 
@@ -330,19 +352,31 @@ module.exports = {
     // https://eslint.org/docs/rules/multiline-ternary
     'multiline-ternary': 'off',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/new-cap
-    'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
+    'new-cap': [
+      'error',
+      {
+        newIsCap: true,
+        newIsCapExceptions: [],
+        capIsNew: false,
+        capIsNewExceptions: [
+          'Immutable.Map',
+          'Immutable.Set',
+          'Immutable.List',
+        ],
+      },
+    ],
 
     // Disabled for Prettier
     // https://eslint.org/docs/rules/new-parens
     'new-parens': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/newline-after-var
     'newline-after-var': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/newline-before-return
     'newline-before-return': 'off',
 
@@ -350,7 +384,7 @@ module.exports = {
     // https://eslint.org/docs/rules/newline-per-chained-call
     'newline-per-chained-call': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-alert
     'no-alert': 'warn',
 
@@ -362,15 +396,15 @@ module.exports = {
     // https://eslint.org/docs/rules/no-async-promise-executor
     'no-async-promise-executor': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-await-in-loop
     'no-await-in-loop': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-bitwise
     'no-bitwise': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-buffer-constructor
     'no-buffer-constructor': 'error',
 
@@ -382,7 +416,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-case-declarations
     'no-case-declarations': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-catch-shadow
     'no-catch-shadow': 'off',
 
@@ -394,15 +428,15 @@ module.exports = {
     // https://eslint.org/docs/rules/no-compare-neg-zero
     'no-compare-neg-zero': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-cond-assign
-    'no-cond-assign': 'error',
+    'no-cond-assign': ['error', 'always'],
 
     // Disabled for Prettier
     // https://eslint.org/docs/rules/no-confusing-arrow
     'no-confusing-arrow': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-console
     'no-console': 'warn',
 
@@ -410,15 +444,15 @@ module.exports = {
     // https://eslint.org/docs/rules/no-const-assign
     'no-const-assign': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-constant-condition
-    'no-constant-condition': ['error', { checkLoops: false }],
+    'no-constant-condition': 'warn',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-constructor-return
     'no-constructor-return': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-continue
     'no-continue': 'error',
 
@@ -434,7 +468,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-delete-var
     'no-delete-var': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-div-regex
     'no-div-regex': 'off',
 
@@ -446,7 +480,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-dupe-class-members
     'no-dupe-class-members': 'error',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-dupe-else-if
     'no-dupe-else-if': 'error',
 
@@ -458,15 +492,15 @@ module.exports = {
     // https://eslint.org/docs/rules/no-duplicate-case
     'no-duplicate-case': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-duplicate-imports
     'no-duplicate-imports': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-else-return
     'no-else-return': ['error', { allowElseIf: false }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-empty
     'no-empty': 'error',
 
@@ -474,7 +508,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-empty-character-class
     'no-empty-character-class': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-empty-function
     'no-empty-function': [
       'error',
@@ -485,7 +519,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-empty-pattern
     'no-empty-pattern': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-eq-null
     'no-eq-null': 'off',
 
@@ -509,7 +543,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-extra-boolean-cast
     'no-extra-boolean-cast': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-extra-label
     'no-extra-label': 'error',
 
@@ -533,18 +567,18 @@ module.exports = {
     // https://eslint.org/docs/rules/no-func-assign
     'no-func-assign': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-global-assign
-    'no-global-assign': 'error',
+    'no-global-assign': ['error', { exceptions: [] }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-implicit-coercion
     'no-implicit-coercion': [
       'off',
       { boolean: false, number: true, string: true, allow: [] },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-implicit-globals
     'no-implicit-globals': 'off',
 
@@ -552,23 +586,23 @@ module.exports = {
     // https://eslint.org/docs/rules/no-implied-eval
     'no-implied-eval': 'error',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-import-assign
     'no-import-assign': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-inline-comments
     'no-inline-comments': 'off',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-inner-declarations
-    'no-inner-declarations': ['error', 'functions'],
+    'no-inner-declarations': 'error',
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-invalid-regexp
     'no-invalid-regexp': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-invalid-this
     'no-invalid-this': 'off',
 
@@ -580,7 +614,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-iterator
     'no-iterator': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-label-var
     'no-label-var': 'error',
 
@@ -592,19 +626,19 @@ module.exports = {
     // https://eslint.org/docs/rules/no-lone-blocks
     'no-lone-blocks': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-lonely-if
     'no-lonely-if': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-loop-func
     'no-loop-func': 'error',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-loss-of-precision
     'no-loss-of-precision': fromVersion('7.1.0', 'error'),
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-magic-numbers
     'no-magic-numbers': [
       'off',
@@ -624,7 +658,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-mixed-operators
     'no-mixed-operators': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-mixed-requires
     'no-mixed-requires': ['off', false],
 
@@ -632,7 +666,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-mixed-spaces-and-tabs
     'no-mixed-spaces-and-tabs': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-multi-assign
     'no-multi-assign': 'error',
 
@@ -648,19 +682,19 @@ module.exports = {
     // https://eslint.org/docs/rules/no-multiple-empty-lines
     'no-multiple-empty-lines': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-native-reassign
     'no-native-reassign': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-negated-condition
     'no-negated-condition': 'off',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-negated-in-lhs
-    'no-negated-in-lhs': 'error',
+    'no-negated-in-lhs': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-nested-ternary
     'no-nested-ternary': 'error',
 
@@ -700,7 +734,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-octal-escape
     'no-octal-escape': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-param-reassign
     'no-param-reassign': [
       'error',
@@ -726,19 +760,19 @@ module.exports = {
     // https://eslint.org/docs/rules/no-path-concat
     'no-path-concat': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-plusplus
     'no-plusplus': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-process-env
     'no-process-env': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-process-exit
     'no-process-exit': 'off',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-promise-executor-return
     'no-promise-executor-return': fromVersion('7.3.0', 'error'),
 
@@ -750,36 +784,36 @@ module.exports = {
     // https://eslint.org/docs/rules/no-prototype-builtins
     'no-prototype-builtins': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-redeclare
-    'no-redeclare': ['error', { builtinGlobals: false }],
+    'no-redeclare': 'error',
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-regex-spaces
     'no-regex-spaces': 'error',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-restricted-exports
     'no-restricted-exports': fromVersion('7.0.0', [
       'error',
       { restrictedNamedExports: ['default', 'then'] },
     ]),
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-restricted-globals
     'no-restricted-globals': ['error', 'isFinite', 'isNaN'].concat(
       confusingBrowserGlobals,
     ),
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-restricted-imports
     'no-restricted-imports': ['off', { paths: [], patterns: [] }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-restricted-modules
     'no-restricted-modules': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-restricted-properties
     'no-restricted-properties': [
       'error',
@@ -833,7 +867,7 @@ module.exports = {
       },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': [
       'error',
@@ -859,15 +893,15 @@ module.exports = {
       },
     ],
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-return-assign
-    'no-return-assign': ['error', 'except-parens'],
+    'no-return-assign': ['error', 'always'],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-return-await
     'no-return-await': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-script-url
     'no-script-url': 'error',
 
@@ -883,11 +917,11 @@ module.exports = {
     // https://eslint.org/docs/rules/no-sequences
     'no-sequences': 'error',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-setter-return
     'no-setter-return': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-shadow
     'no-shadow': 'error',
 
@@ -903,7 +937,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-sparse-arrays
     'no-sparse-arrays': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-sync
     'no-sync': 'off',
 
@@ -915,7 +949,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-template-curly-in-string
     'no-template-curly-in-string': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-ternary
     'no-ternary': 'off',
 
@@ -939,16 +973,16 @@ module.exports = {
     // https://eslint.org/docs/rules/no-undef-init
     'no-undef-init': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-undefined
     'no-undefined': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-underscore-dangle
     'no-underscore-dangle': [
       'error',
       {
-        allow: [],
+        allow: ['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'],
         allowAfterThis: false,
         allowAfterSuper: false,
         enforceInMethodNames: true,
@@ -959,11 +993,11 @@ module.exports = {
     // https://eslint.org/docs/rules/no-unexpected-multiline
     'no-unexpected-multiline': 'off',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-unmodified-loop-condition
-    'no-unmodified-loop-condition': 'error',
+    'no-unmodified-loop-condition': 'off',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-unneeded-ternary
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
 
@@ -971,9 +1005,9 @@ module.exports = {
     // https://eslint.org/docs/rules/no-unreachable
     'no-unreachable': 'error',
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-unreachable-loop
-    'no-unreachable-loop': fromVersion('7.3.0', ['error', { ignore: [] }]),
+    'no-unreachable-loop': fromVersion('7.3.0', 'error'),
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-unsafe-finally
@@ -983,42 +1017,42 @@ module.exports = {
     // https://eslint.org/docs/rules/no-unsafe-negation
     'no-unsafe-negation': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-unused-expressions
     'no-unused-expressions': [
       'error',
       {
-        allowShortCircuit: true,
-        allowTernary: true,
-        allowTaggedTemplates: true,
+        allowShortCircuit: false,
+        allowTaggedTemplates: false,
+        allowTernary: false,
       },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-unused-labels
     'no-unused-labels': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-unused-vars
     'no-unused-vars': [
       'error',
-      { vars: 'all', args: 'none', ignoreRestSiblings: true },
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
     ],
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-use-before-define
     'no-use-before-define': [
       'error',
-      { functions: false, classes: false, variables: false },
+      { classes: true, functions: true, variables: true },
     ],
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/no-useless-backreference
     'no-useless-backreference': fromVersion('7.0.0', 'error'),
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-useless-call
-    'no-useless-call': 'error',
+    'no-useless-call': 'off',
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-useless-catch
@@ -1028,7 +1062,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-useless-computed-key
     'no-useless-computed-key': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-useless-concat
     'no-useless-concat': 'error',
 
@@ -1040,15 +1074,18 @@ module.exports = {
     // https://eslint.org/docs/rules/no-useless-escape
     'no-useless-escape': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-useless-rename
-    'no-useless-rename': 'error',
+    'no-useless-rename': [
+      'error',
+      { ignoreDestructuring: false, ignoreExport: false, ignoreImport: false },
+    ],
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/no-useless-return
     'no-useless-return': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-var
     'no-var': 'error',
 
@@ -1056,7 +1093,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-void
     'no-void': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/no-warning-comments
     'no-warning-comments': [
       'off',
@@ -1087,7 +1124,7 @@ module.exports = {
     // https://eslint.org/docs/rules/object-property-newline
     'object-property-newline': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/object-shorthand': ['error', 'always', { ignoreConstructors: false, avoidQuotes: true, }], // 'operator-assignment
     'object-shorthand': [
       'error',
@@ -1095,15 +1132,15 @@ module.exports = {
       { ignoreConstructors: false, avoidQuotes: true },
     ],
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/one-var
-    'one-var': ['error', { initialized: 'never' }],
+    'one-var': ['error', 'never'],
 
     // Disabled for Prettier
     // https://eslint.org/docs/rules/one-var-declaration-per-line
     'one-var-declaration-per-line': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     'operator-assignment': ['error', 'always'],
 
     // Disabled for Prettier
@@ -1114,7 +1151,7 @@ module.exports = {
     // https://eslint.org/docs/rules/padded-blocks
     'padded-blocks': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/padding-line-between-statements
     'padding-line-between-statements': 'off',
 
@@ -1124,9 +1161,12 @@ module.exports = {
 
     // Taken from eslint-config-standard
     // https://eslint.org/docs/rules/prefer-const
-    'prefer-const': ['error', { destructuring: 'all' }],
+    'prefer-const': [
+      'error',
+      { destructuring: 'any', ignoreReadBeforeAssign: true },
+    ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-destructuring
     'prefer-destructuring': [
       'error',
@@ -1137,43 +1177,43 @@ module.exports = {
       { enforceForRenamedProperties: false },
     ],
 
-    // Taken from eslint-config-airbnb-base (and enabled)
+    // Taken from eslint-config-airbnb (and enabled)
     // https://eslint.org/docs/rules/prefer-exponentiation-operator
     'prefer-exponentiation-operator': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-numeric-literals
     'prefer-numeric-literals': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-object-spread
     'prefer-object-spread': 'error',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-promise-reject-errors
-    'prefer-promise-reject-errors': 'error',
+    'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-reflect
     'prefer-reflect': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-regex-literals
     'prefer-regex-literals': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-rest-params
     'prefer-rest-params': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-spread
     'prefer-spread': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/prefer-template
     'prefer-template': 'error',
 
@@ -1185,27 +1225,27 @@ module.exports = {
     // https://eslint.org/docs/rules/quotes
     quotes: 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/radix
     radix: 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/require-atomic-updates
     'require-atomic-updates': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/require-await
     'require-await': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/require-jsdoc
     'require-jsdoc': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/require-unicode-regexp
     'require-unicode-regexp': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/require-yield
     'require-yield': 'error',
 
@@ -1225,7 +1265,7 @@ module.exports = {
     // https://eslint.org/docs/rules/semi-style
     'semi-style': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/sort-imports
     'sort-imports': [
       'off',
@@ -1237,11 +1277,11 @@ module.exports = {
       },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/sort-keys
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/sort-vars
     'sort-vars': 'off',
 
@@ -1265,22 +1305,25 @@ module.exports = {
     // https://eslint.org/docs/rules/space-unary-ops
     'space-unary-ops': 'off',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/spaced-comment
     'spaced-comment': [
       'error',
       'always',
       {
-        line: { markers: ['*package', '!', '/', ',', '='] },
+        line: {
+          exceptions: ['-', '+'],
+          markers: ['=', '!', '/'],
+        },
         block: {
+          exceptions: ['-', '+'],
+          markers: ['=', '!', ':', '::'],
           balanced: true,
-          markers: ['*package', '!', ',', ':', '::', 'flow-include'],
-          exceptions: ['*'],
         },
       },
     ],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/strict
     strict: ['error', 'never'],
 
@@ -1308,7 +1351,7 @@ module.exports = {
     // https://eslint.org/docs/rules/use-isnan
     'use-isnan': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/valid-jsdoc
     'valid-jsdoc': 'off',
 
@@ -1316,7 +1359,7 @@ module.exports = {
     // https://eslint.org/docs/rules/valid-typeof
     'valid-typeof': ['error', { requireStringLiterals: true }],
 
-    // Taken from eslint-config-airbnb-base
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/vars-on-top
     'vars-on-top': 'error',
 
@@ -1332,8 +1375,8 @@ module.exports = {
     // https://eslint.org/docs/rules/yield-star-spacing
     'yield-star-spacing': 'off',
 
-    // Taken from eslint-config-standard
+    // Taken from eslint-config-airbnb
     // https://eslint.org/docs/rules/yoda
-    yoda: ['error', 'never'],
+    yoda: 'error',
   }),
 }

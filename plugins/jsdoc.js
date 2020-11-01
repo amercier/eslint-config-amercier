@@ -1,14 +1,21 @@
 module.exports = {
   plugins: ['jsdoc'],
-
+  settings: {
+    jsdoc: {
+      preferredTypes: {
+        object: 'Object',
+        unknown: 'unknown',
+      },
+    },
+  },
   rules: {
     // Taken from plugin:jsdoc/recommended
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-access
     'jsdoc/check-access': 'warn',
 
-    // Taken from plugin:jsdoc/recommended
+    // Disabled because of Prettier
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-alignment
-    'jsdoc/check-alignment': 'warn',
+    'jsdoc/check-alignment': 'off',
 
     // Taken from plugin:jsdoc/recommended
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-examples
@@ -110,9 +117,9 @@ module.exports = {
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param
     'jsdoc/require-param': 'warn',
 
-    // Taken from plugin:jsdoc/recommended
+    // Custom (disabled because too intrusive)
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-description
-    'jsdoc/require-param-description': 'warn',
+    'jsdoc/require-param-description': 'off',
 
     // Taken from plugin:jsdoc/recommended
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-param-name
@@ -146,9 +153,9 @@ module.exports = {
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-check
     'jsdoc/require-returns-check': 'warn',
 
-    // Taken from plugin:jsdoc/recommended
+    // Custom (disabled because too intrusive)
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-description
-    'jsdoc/require-returns-description': 'warn',
+    'jsdoc/require-returns-description': 'off',
 
     // Taken from plugin:jsdoc/recommended
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-returns-type
@@ -158,8 +165,8 @@ module.exports = {
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-throws
     'jsdoc/require-throws': 'error',
 
-    // Taken from plugin:jsdoc/recommended
+    // Custom (disabled because broken on function definitions)
     // https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-valid-types
-    'jsdoc/valid-types': 'warn',
+    'jsdoc/valid-types': 'off',
   },
 }

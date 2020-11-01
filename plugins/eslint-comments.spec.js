@@ -7,9 +7,10 @@ const {
 } = require('../test/helpers')
 const { rules } = require('./eslint-comments')
 
+const DISABLED_RULES = ['eslint-comments/disable-enable-pair']
 const ESLINT_COMMENTS_PLUGIN_RULE_NAMES = getPluginRuleNames('eslint-comments')
 
-const reactHooksRecommendedConfigRules = getConfigRules([
+const eslintCommentsRecommendedConfigRules = getConfigRules([
   'plugin:eslint-comments/recommended',
 ])
 
@@ -41,9 +42,12 @@ describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
     it('follows Standard rule', async () => {
       expect(rule).toStrictEqual(standardConfigRules[ruleName])
     })
-  } else if (reactHooksRecommendedConfigRules[ruleName]) {
+  } else if (
+    eslintCommentsRecommendedConfigRules[ruleName] &&
+    !DISABLED_RULES.includes(ruleName)
+  ) {
     it('follows eslint-comments:recommended rule', async () => {
-      expect(rule).toStrictEqual(reactHooksRecommendedConfigRules[ruleName])
+      expect(rule).toStrictEqual(eslintCommentsRecommendedConfigRules[ruleName])
     })
   } else {
     it('is OFF', async () => {

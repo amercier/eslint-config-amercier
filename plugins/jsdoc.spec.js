@@ -6,6 +6,13 @@ const JEST_PLUGIN_RULE_NAMES = getPluginRuleNames('jsdoc')
 const jsdocRecommendedConfigRules = getConfigRules(['plugin:jsdoc/recommended'])
 
 const CUSTOM_RULES = ['jsdoc/require-throws']
+const DISABLED_RULES = [
+  'jsdoc/check-alignment',
+  'jsdoc/require-jsdoc',
+  'jsdoc/require-param-description',
+  'jsdoc/require-returns-description',
+  'jsdoc/valid-types',
+]
 
 it('are alphabetically ordered', () => {
   const compare = (a, b) => (a < b ? -1 : 1)
@@ -27,7 +34,10 @@ describe.each(Object.entries(rules))('%s definition', (ruleName, rule) => {
     it('has custom definition', () => {
       expect(rule).not.toStrictEqual('off')
     })
-  } else if (jsdocRecommendedConfigRules[ruleName]) {
+  } else if (
+    jsdocRecommendedConfigRules[ruleName] &&
+    !DISABLED_RULES.includes(ruleName)
+  ) {
     it('follows plugin:jsdoc/recommended rule', async () => {
       expect(rule).toStrictEqual(jsdocRecommendedConfigRules[ruleName])
     })

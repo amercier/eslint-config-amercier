@@ -1,9 +1,9 @@
 module.exports = {
   plugins: ['eslint-comments'],
   rules: {
-    // Taken from plugin:eslint-comments/recommended
+    // Custom (disabled because too intrusive)
     // https://github.com/mysticatea/eslint-plugin-eslint-comments/blob/master/docs/rules/disable-enable-pair.md
-    'eslint-comments/disable-enable-pair': 'error',
+    'eslint-comments/disable-enable-pair': 'off',
 
     // Taken from plugin:eslint-comments/recommended
     // https://github.com/mysticatea/eslint-plugin-eslint-comments/blob/master/docs/rules/no-aggregating-enable.md
