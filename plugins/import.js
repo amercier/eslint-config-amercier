@@ -94,7 +94,7 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
     'import/no-dynamic-require': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Custom
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
     'import/no-extraneous-dependencies': [
       'error',
@@ -187,11 +187,22 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
     'import/no-webpack-loader-syntax': 'error',
 
-    // Taken from eslint-config-airbnb-base
+    // Custom
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     'import/order': [
       'error',
-      { groups: [['builtin', 'external', 'internal']] },
+      {
+        alphabetize: { order: 'asc' },
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'ignore',
+      },
     ],
 
     // Custom: eslint-config-airbnb-base defined it, but sometimes it can be
