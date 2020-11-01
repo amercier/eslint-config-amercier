@@ -1,11 +1,10 @@
 const confusingBrowserGlobals = require('confusing-browser-globals')
-const compare = require('semver-compare')
+const { ESLint, CLIEngine } = require('eslint')
 const { pickBy } = require('lodash')
+const compare = require('semver-compare')
 
-const { ESLint } = require('eslint')
-
-const eslintVersion = process.env.ESLINT_VERSION || ESLint.version
-process.stderr.write(`ESLINT VERSION: ${eslintVersion}\n\n`)
+const eslintVersion =
+  process.env.ESLINT_VERSION || (ESLint || CLIEngine || {}).version
 
 const fromVersion = (version, value) =>
   compare(eslintVersion, version) >= 0 ? value : null
