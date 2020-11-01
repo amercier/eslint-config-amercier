@@ -1,10 +1,11 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 5,
-  },
   env: {
     browser: true,
+    es6: false,
     node: false,
+  },
+  parserOptions: {
+    ecmaVersion: 5,
   },
   extends: [
     './plugins/eslint-comments',

@@ -1,10 +1,11 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
   env: {
     browser: false,
+    es6: true,
     node: true,
+  },
+  parserOptions: {
+    ecmaVersion: 2020,
   },
   extends: [
     './plugins/eslint',
