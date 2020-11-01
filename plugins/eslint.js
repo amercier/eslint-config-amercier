@@ -5,6 +5,7 @@ const { pickBy } = require('lodash')
 const { ESLint } = require('eslint')
 
 const eslintVersion = process.env.ESLINT_VERSION || ESLint.version
+process.stderr.write(`ESLINT VERSION: ${eslintVersion}\n\n`)
 
 const fromVersion = (version, value) =>
   compare(eslintVersion, version) >= 0 ? value : null
