@@ -24,6 +24,20 @@ module.exports = {
         // Next.js uses react-require Babel plugin, so we don't want this rule.
         // Read more: https://github.com/vercel/next.js/pull/295
         'react/react-in-jsx-scope': 'off',
+
+        // Prevent importing react for the same reason.
+        'no-restricted-imports': [
+          'error',
+          {
+            paths: [
+              {
+                name: 'react',
+                importNames: ['default'],
+                message: 'Importing React is not required since Next.js 6.0',
+              },
+            ],
+          },
+        ],
       },
     },
   ],
