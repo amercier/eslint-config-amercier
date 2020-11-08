@@ -20,6 +20,9 @@ module.exports = {
       files: ['*'],
       excludedFiles: [...CONFIG_FILES, ...SERVER_FILES, ...PUBLIC_FILES],
       extends: ['./react'],
+      globals: {
+        process: true,
+      },
       rules: {
         // Next.js uses react-require Babel plugin, so we don't want this rule.
         // Read more: https://github.com/vercel/next.js/pull/295
