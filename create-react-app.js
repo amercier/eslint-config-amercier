@@ -17,10 +17,6 @@ module.exports = {
       extends: './react',
     },
     {
-      files: ['src/**/*.stories.{js,jsx,ts,tsx}'],
-      extends: ['./dev', './storybook'],
-    },
-    {
       files: ['src/setupTests.js'],
       extends: ['./dev'],
       globals: { global: true },

@@ -1,7 +1,6 @@
 const CONFIG_FILES = ['./.*']
 const SERVER_FILES = ['./*']
 const PUBLIC_FILES = ['./browser']
-const STORYBOOK_FILES = ['*.stories.*']
 
 module.exports = {
   overrides: [
@@ -26,10 +25,6 @@ module.exports = {
         // Read more: https://github.com/vercel/next.js/pull/295
         'react/react-in-jsx-scope': 'off',
       },
-    },
-    {
-      files: STORYBOOK_FILES,
-      extends: ['./dev', './storybook'],
     },
   ],
 }
