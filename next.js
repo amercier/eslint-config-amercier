@@ -1,6 +1,7 @@
-const CONFIG_FILES = ['.*']
-const SERVER_FILES = ['*server.*']
+const CONFIG_FILES = ['./.*']
+const SERVER_FILES = ['./*']
 const PUBLIC_FILES = ['./browser']
+const STORYBOOK_FILES = ['*.stories.*']
 
 module.exports = {
   overrides: [
@@ -27,7 +28,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/*.stories.*'],
+      files: STORYBOOK_FILES,
       extends: ['./dev', './storybook'],
     },
   ],

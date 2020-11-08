@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-amercier",
-  "version": "2.0.0-alpha.7",
+  "version": "2.0.0-alpha.8",
   "description": "My personal collection of ESLint Shareable Configs",
   "repository": "github:amercier/eslint-config-amercier",
   "bugs": "https://github.com/amercier/eslint-config-amercier/issues",
