@@ -16,7 +16,10 @@ module.exports = {
       files: ['src/**'],
       extends: './react',
     },
-    { files: ['src/**/*.stories.js'], extends: ['./dev', './storybook'] },
+    {
+      files: ['src/**/*.stories.{js,jsx,ts,tsx}'],
+      extends: ['./dev', './storybook'],
+    },
     {
       files: ['src/setupTests.js'],
       extends: ['./dev'],
