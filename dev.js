@@ -1,5 +1,5 @@
 module.exports = {
   rules: {
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['*'] }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**'] }],
   },
 }
