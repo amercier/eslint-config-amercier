@@ -1,6 +1,6 @@
 const CONFIG_FILES = ['./.*']
 const SERVER_FILES = ['./*']
-const PUBLIC_FILES = ['./browser']
+const PUBLIC_FILES = ['public/**']
 
 module.exports = {
   overrides: [
@@ -13,8 +13,8 @@ module.exports = {
       extends: ['./node'],
     },
     {
-      files: 'public/**',
-      extends: PUBLIC_FILES,
+      files: PUBLIC_FILES,
+      extends: ['./browser'],
     },
     {
       files: ['*'],
