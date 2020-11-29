@@ -6,7 +6,7 @@ module.exports = {
   overrides: [
     {
       files: CONFIG_FILES,
-      extends: ['./node', './dev'],
+      extends: ['./node', './addons/dev'],
     },
     {
       files: SERVER_FILES,

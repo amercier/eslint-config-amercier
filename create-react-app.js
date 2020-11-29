@@ -3,11 +3,11 @@ module.exports = {
     {
       files: ['**/*'],
       excludedFiles: ['public/**', 'src/**'],
-      extends: ['./node', './dev'],
+      extends: ['./node', './addons/dev'],
     },
     {
       files: ['scripts/**/*'],
-      extends: ['./node', './dev'],
+      extends: ['./node', './addons/dev'],
     },
 
     { files: ['public/**'], extends: './browser' },
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       files: ['src/setupTests.js'],
-      extends: ['./dev'],
+      extends: ['./addons/dev'],
       globals: { global: true },
     },
     {
