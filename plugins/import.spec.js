@@ -6,7 +6,7 @@ const {
 } = require('../test/helpers')
 const { rules } = require('./import')
 
-const CUSTOM_RULES = ['import/order']
+const CUSTOM_RULES = ['import/extensions', 'import/order']
 const IMPORT_PLUGIN_RULE_NAMES = getPluginRuleNames('import')
 const AIRBNB_DISABLED_RULES = ['import/prefer-default-export']
 

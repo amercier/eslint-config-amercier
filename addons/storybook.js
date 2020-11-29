@@ -1,7 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: '*.stories.js',
+      files: '*.stories.*',
       extends: './dev',
       rules: {
         // Allow props spreading in Storybook stories, as suggested in documentation

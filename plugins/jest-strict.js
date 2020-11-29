@@ -5,7 +5,7 @@ module.exports = {
       extends: ['./jest'],
     },
     {
-      files: '**.spec.*',
+      files: '*.spec.*',
       rules: {
         // In .spec.* files, we only allow `describe` / `it`. Specs must be
         // written using BDD style.
@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     {
-      files: '**.test.*',
+      files: '*.test.*',
       rules: {
         // In .test.* files, we only allow `describe` / `test`. Tests must be
         // written using TDD style.

@@ -1,5 +1,18 @@
 module.exports = {
   plugins: ['import'],
+
+  settings: {
+    'import/extensions': ['.cjs', '.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.cjs', '.js', '.jsx', '.mjs', '.ts', '.tsx'],
+      },
+    },
+  },
+
   rules: {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
     'import/default': 'off',
@@ -18,12 +31,19 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
     'import/exports-last': 'off',
 
-    // Taken from eslint-config-airbnb-base
+    // Custom (taken from eslint-config-airbnb-base)
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     'import/extensions': [
       'error',
       'ignorePackages',
-      { js: 'never', jsx: 'never', mjs: 'never' },
+      {
+        cjs: 'never',
+        js: 'never',
+        jsx: 'never',
+        mjs: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
     ],
 
     // Taken from eslint-config-airbnb-base
@@ -105,22 +125,22 @@ module.exports = {
           'spec/**',
           '**/__tests__/**',
           '**/__mocks__/**',
-          'test.{js,jsx}',
-          'test-*.{js,jsx}',
-          '**/*{.,_}{test,spec}.{js,jsx}',
-          '**/jest.config.js',
-          '**/jest.setup.js',
-          '**/vue.config.js',
-          '**/webpack.config.js',
-          '**/webpack.config.*.js',
-          '**/rollup.config.js',
-          '**/rollup.config.*.js',
-          '**/gulpfile.js',
-          '**/gulpfile.*.js',
-          '**/Gruntfile{,.js}',
-          '**/protractor.conf.js',
-          '**/protractor.conf.*.js',
-          '**/karma.conf.js',
+          'test.*',
+          'test-*.*',
+          '**/*{.,_}{test,spec}.*',
+          '**/jest.config.*',
+          '**/jest.setup.*',
+          '**/vue.config.*',
+          '**/webpack.config.*',
+          '**/webpack.config.*.*',
+          '**/rollup.config.*',
+          '**/rollup.config.*.*',
+          '**/gulpfile.*',
+          '**/gulpfile.*.*',
+          '**/Gruntfile{,.*}',
+          '**/protractor.conf.*',
+          '**/protractor.conf.*.*',
+          '**/karma.conf.*',
         ],
         optionalDependencies: false,
       },
