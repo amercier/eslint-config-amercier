@@ -1,15 +1,10 @@
 const react = require('../react')
+const typescript = require('./typescript')
 
 module.exports = {
-  overrides: [
-    {
-      files: '*.tsx',
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        project: './tsconfig.json',
-        ...react.parserOptions,
-      },
-      plugins: ['@typescript-eslint'],
-    },
-  ],
+  ...typescript,
+  parserOptions: {
+    ...typescript.parserOptions,
+    ...react.parserOptions,
+  },
 }
